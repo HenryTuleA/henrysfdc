@@ -1,0 +1,36 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabstyle="account" sidebar="false" >
+
+ <apex:form >
+ <!--
+          <apex:actionFunction name="readCell" action="{!readCellMethod}">
+            <apex:param name="rowID" value="" assignTo="{!clickedRowId}"/>
+        </apex:actionFunction>
+ -->      
+        <table cellspacing="0" cellpadding="0" border="0" class="list">
+             <tr class="headerRow">
+                    <th class="headerRow">
+                        <apex:outputText value="{!$ObjectType.Account.fields.Id.label}"/>
+                    </th>
+                    <th class="headerRow">
+                        <apex:outputText value="{!$ObjectType.Account.fields.Name.label}"/>
+                    </th>
+                </tr>
+            <apex:repeat value="{!accounts}" var="acc">
+               
+                <tr id="row{!acc.Id}">
+                    <script>
+                        document.getElementById('row{!acc.Id}').onclick = function() {
+                            return readCell('{!acc.Id}')
+                        };
+                    </script>
+                    <td>
+                        <apex:outputText value="{!acc.Id}"/>
+                    </td>
+                    <td>
+                        <apex:outputText value="{!acc.Name}"/>
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+    </apex:form>    
+</apex:page>

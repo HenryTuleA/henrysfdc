@@ -1,0 +1,38 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabstyle="account" sidebar="false" >
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"  />
+        <script type="text/javascript">
+            $j = jQuery.noConflict();
+            function clickElem(elem){
+                alert($j(elem).find(".accId").html());
+            }
+        </script>
+<apex:form >
+<!--
+     <apex:actionFunction name="readCell" action="{!readCellMethod}">
+        <apex:param name="rowID" value="" assignTo="{!clickedRowId}"/>
+     </apex:actionFunction>
+-->
+    
+    <apex:pageBlock >           
+         <!-- <apex:pageBlockTable value="{!account}" var="acc" onRowClick="clickElem(this);">                                    
+               <apex:column headerValue="ID" value="{!acc.Id}" styleClass="accId" />
+               <apex:column headerValue="Name" value="{!acc.Name}" />
+            </apex:pageBlockTable>         
+         -->  
+         <apex:pageBlockSection > 
+           
+            <apex:pageBlockTable value="{!accounts}" var="acc" onRowClick="clickElem(this);">                                    
+               <apex:column headerValue="ID" value="{!acc.Id}"  styleClass="accId" />
+               <apex:column headerValue="Name" value="{!acc.Name}" onclick="readCell('{!acc.Id}')"/>
+           </apex:pageBlockTable>
+            
+         
+            <apex:pageBlockTable value="{!accounts}" var="acc" onRowClick="clickElem(this);">                                    
+               <apex:column headerValue="ID" value="{!acc.Id}"  styleClass="accId" />
+               <apex:column headerValue="Name" value="{!acc.Name}" onclick="readCell('{!acc.Id}')"/>
+           </apex:pageBlockTable>
+         </apex:pageBlockSection>     
+    </apex:pageBlock>
+</apex:form>
+
+</apex:page>
