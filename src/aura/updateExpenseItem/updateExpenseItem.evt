@@ -1,0 +1,5 @@
+<!--<aura:event type="APPLICATION" description="Event template" /> lightnsf__ -->
+<aura:event type="COMPONENT">
+    <!-- If you’re using a namespace, use myNamespace.Expense__c instead. -->
+    <aura:attribute name="expense" type="Expense__c"/>
+</aura:event>

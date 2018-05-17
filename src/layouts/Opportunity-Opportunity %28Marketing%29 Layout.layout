@@ -25,6 +25,10 @@
                 <behavior>Edit</behavior>
                 <field>CampaignId</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>AnnualContractAmount__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -146,9 +150,6 @@
             <quickActionName>FeedItem.TextPost</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
-            <quickActionName>FeedItem.ContentPost</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
             <quickActionName>NewTask</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
@@ -171,6 +172,12 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.QuestionPost</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>FeedItem.ContentPost</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>SendEmail</quickActionName>
         </quickActionListItems>
     </quickActionList>
     <relatedContent>
@@ -243,10 +250,18 @@
         <fields>QUOTE.NAME</fields>
         <fields>QUOTE.ISSYNCING</fields>
         <fields>QUOTE.EXPIRATIONDATE</fields>
-        <fields>Discount</fields>
-        <fields>GrandTotal</fields>
+        <fields>QUOTE.SUBTOTAL</fields>
+        <fields>QUOTE.TOTALPRICE</fields>
         <fields>CreatedBy</fields>
         <relatedList>RelatedQuoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>SplitOwner</fields>
+        <fields>SplitType</fields>
+        <fields>SplitPercentage</fields>
+        <fields>SplitAmount</fields>
+        <fields>SplitNote</fields>
+        <relatedList>RelatedOpportunitySplits</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <runAssignmentRulesDefault>false</runAssignmentRulesDefault>

@@ -43,6 +43,12 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>IsAlohaSupported</fullName>
+    </fields>
+    <fields>
+        <fullName>IsLightningSupported</fullName>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -50,6 +56,9 @@
         <fullName>OwnerId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>StartingContext</fullName>
     </fields>
     <listViews>
         <fullName>TESTQueue_Macro</fullName>
@@ -61,12 +70,16 @@
         </sharedTo>
     </listViews>
     <searchLayouts>
+        <customTabListAdditionalFields>StartingContext</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>StartingContext</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>LastModifiedDate</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>LastModifiedBy</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>StartingContext</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedDate</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>LastModifiedBy</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>StartingContext</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedDate</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>LastModifiedBy</searchResultsAdditionalFields>
     </searchLayouts>

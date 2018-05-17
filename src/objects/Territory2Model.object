@@ -5,10 +5,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -21,17 +17,20 @@
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
-    <enableFeeds>false</enableFeeds>
+    <enableFeeds>true</enableFeeds>
     <fields>
         <fullName>ActivatedDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>DeactivatedDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -40,22 +39,27 @@
     </fields>
     <fields>
         <fullName>IsCloneSource</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>LastOppTerrAssignEndDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>LastRunRulesEndDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>State</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
     </fields>
     <sharingModel>ReadWrite</sharingModel>

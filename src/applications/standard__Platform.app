@@ -7,4 +7,7 @@
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
     <tab>Camping_Item__c</tab>
+    <tab>TMSystem__c</tab>
+    <tab>Expense__c</tab>
+    <tab>QuickLink__c</tab>
 </CustomApplication>

@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,force:lightningQuickAction" >
+	<aura:attribute name="edit" type="Boolean" default="true"/>
+    <aura:attribute name="likeId" type="String" default="Click Me"/>
+    
+    <aura:handler name="change" value="{!v.parentAttr}" action="{!c.onParentAttrChange}"/>
+     <p>isTablet: {!$Browser.isTablet} </p>
+ 	 <p>isPhone:{!$Browser.isPhone}</p>
+  	<p>isAndroid:{!$Browser.isAndroid}</p>
+  	<p>formFactor:{!$Browser.formFactor}</p>
+    
+    <ui:button aura:id="likeBtn"
+     label="{!v.likeId}"
+     press="{!(v.likeId == 'I like') ?  c.unlikeIt  : c.likeIt }" 
+               />
+
+    <!--c:parent-->
+	<aura:attribute name="parentAttr" type="String" default="parent attribute"/>
+    <!-- Instantiate the child component -->
+   <br/><br/><br/> 
+    <p>parentExpr parentAttr!: {!v.parentAttr}</p><br/>
+    <p>parentExpr parentAttr#: {#v.parentAttr}</p><br/>
+  <p><ui:button label="Update parentAttr Parent Component" press="{!c.updateParentAttr}"/></p>
+    <br/><br/><br/>  
+     <c:ExpressionsChild childAttr="{!v.parentAttr}" />
+	
+    
+    
+</aura:component>

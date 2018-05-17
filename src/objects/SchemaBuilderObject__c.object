@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -55,8 +51,10 @@
     <enableSearch>true</enableSearch>
     <enableSharing>false</enableSharing>
     <enableStreamingApi>false</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>sbEmail__c</fullName>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>sbEmail</label>
         <required>false</required>
@@ -124,4 +122,5 @@
     <pluralLabel>SchemaBuilderObjects</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

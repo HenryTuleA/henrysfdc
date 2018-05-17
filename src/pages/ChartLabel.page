@@ -1,0 +1,30 @@
+<apex:page controller="PieChartController" title="Pie Chart">
+    <apex:chart height="350" width="450" data="{!pieData}">
+        <apex:pieSeries dataField="data" labelField="name"/>
+        <apex:legend position="right"/>
+    </apex:chart>
+    
+    
+    <script>
+    function getRemoteData(callback) {
+       PieChartController.getRemotePieData(function(result, event) {
+           if(event.status && result && result.constructor === Array) {
+               callback(result);
+           }
+       });
+    }
+    
+    // Build the chart data array in JavaScript
+    var dataArray = new Array();
+    dataArray.push({'data1':33,'data2':66,'data3':80,'name':'Jan'});
+    dataArray.push({'data1':33,'data2':66,'data3':80,'name':'Feb'});
+    // ...
+    </script>
+
+    <apex:chart data="dataArray" height="350" width="450" >
+        <apex:pieSeries dataField="data1" labelField="name"/>
+        <apex:legend position="left"/>
+    </apex:chart>
+    
+
+</apex:page>

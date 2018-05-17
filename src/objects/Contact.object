@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>AddToCampaign</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -41,10 +45,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -66,6 +66,10 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -91,6 +95,7 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <enableHistory>false</enableHistory>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>AccountId</fullName>
         <trackFeedHistory>true</trackFeedHistory>
@@ -98,10 +103,12 @@
     </fields>
     <fields>
         <fullName>AssistantName</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>AssistantPhone</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -122,6 +129,7 @@
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -130,10 +138,12 @@
     </fields>
     <fields>
         <fullName>Email</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Fax</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -146,6 +156,7 @@
     </fields>
     <fields>
         <fullName>HomePhone</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -154,6 +165,7 @@
     </fields>
     <fields>
         <fullName>Languages__c</fullName>
+        <encrypted>false</encrypted>
         <externalId>false</externalId>
         <label>Languages</label>
         <length>100</length>
@@ -169,30 +181,18 @@
         <fullName>LastCUUpdateDate</fullName>
     </fields>
     <fields>
+        <fullName>Latitude__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Latitude</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>LeadSource</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
     </fields>
@@ -200,42 +200,74 @@
         <fullName>Level__c</fullName>
         <externalId>false</externalId>
         <label>Level</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Secondary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Tertiary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Primary</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Secondary</fullName>
+                    <default>false</default>
+                    <label>Secondary</label>
+                </value>
+                <value>
+                    <fullName>Tertiary</fullName>
+                    <default>false</default>
+                    <label>Tertiary</label>
+                </value>
+                <value>
+                    <fullName>Primary</fullName>
+                    <default>false</default>
+                    <label>Primary</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <scale>7</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Longitude__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Longitude</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>MailingAddress</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>MobilePhone</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>Name</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>true</trackFeedHistory>
     </fields>
     <fields>
         <fullName>OtherAddress</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
         <fullName>OtherPhone</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -245,6 +277,7 @@
     </fields>
     <fields>
         <fullName>Phone</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
@@ -254,6 +287,7 @@
     </fields>
     <fields>
         <fullName>Title</fullName>
+        <encrypted>false</encrypted>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <listViews>

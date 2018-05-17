@@ -43,8 +43,20 @@
                 <behavior>Readonly</behavior>
                 <field>Potential_Value__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>MinDate__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>AccountSource</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>IsExcludedFromRealign</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Rating</field>
@@ -221,6 +233,12 @@
         <quickActionListItems>
             <quickActionName>FeedItem.QuestionPost</quickActionName>
         </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>Account.updateAction</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>SendEmail</quickActionName>
+        </quickActionListItems>
     </quickActionList>
     <relatedContent>
         <relatedContentItems>
@@ -253,6 +271,22 @@
         <fields>OPPORTUNITY.AMOUNT</fields>
         <fields>OPPORTUNITY.CLOSE_DATE</fields>
         <relatedList>RelatedOpportunityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>TERRITORY.NAME</fields>
+        <fields>MODEL.NAME</fields>
+        <fields>MODEL.STATE</fields>
+        <fields>ASSIGNMENT_DATE</fields>
+        <fields>ASSOCIATION_CAUSE</fields>
+        <relatedList>AccountAssignedTerritory2sRelatedList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>FULL_NAME</fields>
+        <fields>CORE.USERS.EMAIL</fields>
+        <fields>ROLE_IN_TERRITORY</fields>
+        <fields>TERRITORY.NAME</fields>
+        <fields>MODEL.NAME</fields>
+        <relatedList>AccountUserTerritory2RelatedList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
@@ -298,10 +332,11 @@
         <relatedList>RelatedAccountSalesTeam</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
+    <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
-    <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
+    <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
         <masterLabel>00h36000002nOHB</masterLabel>

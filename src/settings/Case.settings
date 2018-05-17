@@ -17,12 +17,16 @@
     </emailToCase>
     <enableCaseFeed>true</enableCaseFeed>
     <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableSuggestedArticlesApplication>false</enableSuggestedArticlesApplication>
+    <enableSuggestedArticlesCustomerPortal>false</enableSuggestedArticlesCustomerPortal>
+    <enableSuggestedArticlesPartnerPortal>false</enableSuggestedArticlesPartnerPortal>
     <enableSuggestedSolutions>true</enableSuggestedSolutions>
     <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
     <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
     <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
     <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
     <useSystemEmailAddress>true</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
     <webToCase>
         <caseOrigin>Web</caseOrigin>
         <defaultResponseTemplate>unfiled$public/SupportCaseCreatedWebInquiries</defaultResponseTemplate>

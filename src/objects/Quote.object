@@ -21,7 +21,7 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
+        <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -34,6 +34,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>SyncQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
@@ -88,6 +96,10 @@
         <type>MasterDetail</type>
     </fields>
     <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Phone</fullName>
     </fields>
     <fields>
@@ -101,49 +113,6 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Draft</fullName>
-                <default>true</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Needs Review</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>In Review</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Approved</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Rejected</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Presented</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Accepted</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Denied</fullName>
-                <default>false</default>
-                <allowEmail>true</allowEmail>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -155,26 +124,43 @@
     <fields>
         <fullName>TotalPrice</fullName>
     </fields>
+    <listViews>
+        <fullName>mine</fullName>
+        <columns>QUOTE.NAME</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>QUOTE.ISSYNCING</columns>
+        <columns>QUOTE.EXPIRATIONDATE</columns>
+        <columns>QUOTE.SUBTOTAL</columns>
+        <columns>QUOTE.TOTALPRICE</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Quotes</label>
+    </listViews>
     <searchLayouts>
+        <customTabListAdditionalFields>QUOTE.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.ISSYNCING</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.EXPIRATIONDATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.SUBTOTAL</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.TOTALPRICE</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>QUOTE.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>CONTACT.FULL_NAME</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Discount</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>GrandTotal</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.ISSYNCING</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.EXPIRATIONDATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.SUBTOTAL</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.TOTALPRICE</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>QUOTE.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>CONTACT.FULL_NAME</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>Discount</lookupPhoneDialogsAdditionalFields>
-        <lookupPhoneDialogsAdditionalFields>GrandTotal</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.ISSYNCING</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.EXPIRATIONDATE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.SUBTOTAL</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.TOTALPRICE</lookupPhoneDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>QUOTE.PHONE</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>QUOTE.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>CONTACT.FULL_NAME</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Discount</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>GrandTotal</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.ISSYNCING</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.EXPIRATIONDATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.SUBTOTAL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.TOTALPRICE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

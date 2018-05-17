@@ -1,0 +1,22 @@
+<aura:component >
+    <c:campingHeader Outmessage="You look nice today."/>
+	<aura:attribute name="messages" type="List"
+        default="['Bug Spray', 
+                 'Bear Repellant',
+                 'Goat Food']"/>
+	
+    <ol >
+        <li>Bug Spray</li>
+        	<c:campingListItem />
+        <li>Bear Repellant</li>
+        	<c:campingListItem />
+        <li>Goat Food</li>
+	</ol>
+    
+    <!--
+    <aura:iteration items="{!v.messages}" var="msg">
+        <p> <ui:outputText value="{!msg}"/></p>
+    </aura:iteration>
+   -->
+   
+</aura:component>

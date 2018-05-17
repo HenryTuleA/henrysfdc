@@ -1,0 +1,36 @@
+<aura:component controller="SampleRecords">
+    <aura:attribute name="childAttr" type="String" />
+    <aura:handler name="change" value="{!this}" action="{!c.onChildAttrChange}"/>
+    <br/>
+    <p>childExpr childAttr!: {!v.childAttr}</p><br/>
+    <p>childExpr childAttr#: {#v.childAttr}</p><br/>
+    <p>childExpr PAttr#:<br/> </p> <br/>
+    <p><ui:button label="UPDATE childAttr" press="{!c.updateChildAttr}"/></p>
+    
+    
+    <form>
+      <fieldset>
+        <legend>Select your favorite color:</legend>
+        <lightning:input type="checkbox" label="Red" 
+            name="color1" value="1" aura:id="colors"/>
+        <lightning:input type="checkbox" label="Blue" 
+            name="color2" value="2" aura:id="colors"/>
+        <lightning:input type="checkbox" label="Green" 
+            name="color3" value="3" aura:id="colors"/>
+      </fieldset>
+    <lightning:button label="Submit" onclick="{!c.submitForm}"/>
+    </form>
+    
+    <form>
+      <fieldset>
+        <legend>Select your favorite color:</legend>
+        <lightning:input type="radio" label="Red" 
+            name="color1" value="1" aura:id="colors"/>
+        <lightning:input type="radio" label="Blue" 
+            name="color2" value="2" aura:id="colors"/>
+        <lightning:input type="radio" label="Green" 
+            name="color3" value="3" aura:id="colors"/>
+      </fieldset>
+    <lightning:button label="Submit" onclick="{!c.testForm}"/>
+    </form>
+</aura:component>

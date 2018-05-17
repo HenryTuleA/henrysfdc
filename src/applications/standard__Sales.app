@@ -7,16 +7,16 @@
     <tab>standard-Account</tab>
     <tab>standard-Contact</tab>
     <tab>standard-Opportunity</tab>
-    <tab>standard-ForecastItem</tab>
-    <tab>standard-AdvForecast</tab>
     <tab>standard-Forecasting3</tab>
     <tab>standard-Contract</tab>
     <tab>standard-Order</tab>
-    <tab>standard-Invoice</tab>
     <tab>standard-Case</tab>
     <tab>standard-Solution</tab>
     <tab>standard-Product2</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
     <tab>Camping_Item__c</tab>
+    <tab>Expense__c</tab>
+    <tab>standard-Quote</tab>
+    <tab>QuickLink__c</tab>
 </CustomApplication>

@@ -33,6 +33,10 @@
                 <behavior>Readonly</behavior>
                 <field>Potential_Value__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>MinDate__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -221,6 +225,9 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.QuestionPost</quickActionName>
+        </quickActionListItems>
+        <quickActionListItems>
+            <quickActionName>SendEmail</quickActionName>
         </quickActionListItems>
     </quickActionList>
     <relatedContent>

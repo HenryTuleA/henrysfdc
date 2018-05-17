@@ -11,7 +11,7 @@
                 <field>LineNumber</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
+                <behavior>Required</behavior>
                 <field>Product2Id</field>
             </layoutItems>
             <layoutItems>

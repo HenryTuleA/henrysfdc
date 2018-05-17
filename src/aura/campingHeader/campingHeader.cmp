@@ -1,0 +1,6 @@
+<aura:component >
+	<H1>Camping List</H1> 
+    <aura:attribute name="Outmessage" type="String" default="how is your day?"/>
+    <p><ui:outputText value="{!'Hey' + v.Outmessage}" /> </p>
+ 
+</aura:component>
