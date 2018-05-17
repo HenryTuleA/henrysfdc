@@ -357,6 +357,14 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>SFDCAntTest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SFDCAntTest</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>SLAExpirationDate__c</fullName>
         <encrypted>false</encrypted>
         <externalId>false</externalId>
