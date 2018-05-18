@@ -379,5 +379,5 @@
         <members>*</members>
         <name>Settings</name>
     </types>
-    <version>41.0</version>
+    <version>39.0</version>
 </Package>
